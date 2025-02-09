@@ -1,5 +1,5 @@
 This program is used to approximate the value of T^(N/R).
-Here, T is a real number, and N and R are real numbers denoting the numerator and denominator of the exponent, respectively.
+Here, T is a real number, and N and R are positive integers denoting the numerator and denominator of the exponent, respectively.
 
 To use this program:
 
