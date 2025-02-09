@@ -2,11 +2,11 @@ import math
 from decimal import *
 
 T = Decimal(input())
-N, R = list(map(Decimal, input().split()))
+N, R = list(map(int, input().split()))
 n = int(input())
 decimalPlaces = int(input())
 
-getcontext().prec = decimalPlaces + 10
+getcontext().prec = int(decimalPlaces * 1.5 + 5)
 
 isNegative = False
 
@@ -32,13 +32,12 @@ elif T < 0 and R % 2 == 0:
 elif (N / R) == int(N / R):
     print(T ** (N // R))
 else:
-    D = math.ceil(math.log(2, abs(T)))
-    L_X = Decimal(2.0) ** (D * math.floor((D - 1) / R))
-    L_Y = Decimal(2.0) ** (math.floor((D - 1) / R))
-    U_X = Decimal(2.0) ** (R * math.ceil(D / R))
-    U_Y = Decimal(2.0) ** (math.ceil(D / R))
-
-    #print(str(L_X) + "\n\n" + str(L_Y) + "\n\n" + str(U_X) + "\n\n" + str(U_Y))
+    D = int(math.ceil(math.log(2, abs(T))))
+    
+    L_X = Decimal(1 << (D * (D - 1) // R))
+    L_Y = Decimal(1 << ((D - 1) // R))
+    U_X = Decimal(1 << (R * ((D + R - 1) // R)))
+    U_Y = Decimal(1 << ((D + R - 1) // R))
 
     A = (T / abs(T)) * (L_Y + ((abs(T) - L_X) / (U_X - L_X)) * (U_Y - L_Y))
     for i in range(n):
