@@ -34,7 +34,7 @@ elif (N / R) == int(N / R):
 else:
     D = int(math.ceil(math.log(2, abs(T))))
     
-    L_X = Decimal(1 << (D * (D - 1) // R))
+    L_X = Decimal(1 << (R * ((D - 1) // R)))
     L_Y = Decimal(1 << ((D - 1) // R))
     U_X = Decimal(1 << (R * ((D + R - 1) // R)))
     U_Y = Decimal(1 << ((D + R - 1) // R))
