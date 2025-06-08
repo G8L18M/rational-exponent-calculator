@@ -32,7 +32,7 @@ elif T < 0 and R % 2 == 0:
 elif (N / R) == int(N / R):
     print(T ** (N // R))
 else:
-    D = int(math.ceil(math.log(2, abs(T))))
+    D = int(math.ceil(math.log(abs(T), 2)))
     
     L_X = Decimal(1 << (R * ((D - 1) // R)))
     L_Y = Decimal(1 << ((D - 1) // R))
