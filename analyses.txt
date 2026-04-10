@@ -1,0 +1,16 @@
+Digit-Based Method
+Average Iterations: 2.201904761904762
+Average Runtime (ns): 4708.383047619047
+
+Built-In Method
+Average Iterations: 0.0
+Average Runtime (ns): 454.02495238095224
+
+Constant Initial Guess of 1.0
+Average Iterations: 4.383809523809524
+Average Runtime (ns): 6100.5028571428575
+
+Exponential Shortcut
+Average Iterations: 0.0
+Average Runtime (ns): 1856.6788571428558
+
