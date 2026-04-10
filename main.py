@@ -2,8 +2,7 @@ import math
 
 T = int(input())
 N, R = list(map(int, input().split()))
-n = int(input())
-decimalPlaces = int(input())
+decimalPlaces = 10
 
 isNegative = False
 
